@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gitti Gidiyorum Maskot Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="top-bar">
+        <div>
+          <p class="eyebrow">Gitti Gidiyorum</p>
+          <h1>Maskot Deneyim Demosu</h1>
+        </div>
+        <div class="coin-chip">
+          <span>Coin</span>
+          <strong id="coinCount">1.250</strong>
+        </div>
+      </header>
+
+      <main class="grid">
+        <section class="panel mascot-panel">
+          <div class="mascot-card">
+            <img src="assets/mascot.svg" alt="Gitti Gidiyorum maskotu" />
+            <div>
+              <h2>Merhaba! Bugün nasılsın?</h2>
+              <p>Konforunu artır, görevleri tamamla ve ödülleri topla.</p>
+            </div>
+          </div>
+          <div class="bars">
+            <div class="bar">
+              <div class="bar-header">
+                <span>Konfor</span>
+                <span id="comfortValue">72%</span>
+              </div>
+              <div class="bar-track">
+                <div class="bar-fill" id="comfortFill" style="width: 72%"></div>
+              </div>
+            </div>
+            <div class="bar">
+              <div class="bar-header">
+                <span>Enerji</span>
+                <span id="energyValue">55%</span>
+              </div>
+              <div class="bar-track">
+                <div class="bar-fill energy" id="energyFill" style="width: 55%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="quick-actions">
+            <button data-action="task">Görev Tamamla</button>
+            <button data-action="chat">Sohbet Et</button>
+            <button data-action="decorate">Odayı Düzenle</button>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h3>Günlük Görevler</h3>
+          <ul class="task-list">
+            <li><span>Maskotla 2 dk konuş</span><button data-action="chat">+50</button></li>
+            <li><span>Mini oyun oyna</span><button data-action="task">+80</button></li>
+            <li><span>Stil setini tamamla</span><button data-action="decorate">+120</button></li>
+          </ul>
+          <div class="hint">Görevleri tamamladıkça konfor barın artar.</div>
+        </section>
+
+        <section class="panel">
+          <h3>Mağaza Önerileri</h3>
+          <div class="shop-grid">
+            <article>
+              <h4>Karaca Mutfak Seti</h4>
+              <p>Konfor +12, set bonusu</p>
+              <button data-action="buy">Satın Al</button>
+            </article>
+            <article>
+              <h4>Premium Laptop</h4>
+              <p>Mini oyun skoru +5%</p>
+              <button data-action="buy">Satın Al</button>
+            </article>
+            <article>
+              <h4>Stil Paketi</h4>
+              <p>Stil +8, yeni kombin</p>
+              <button data-action="buy">Satın Al</button>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h3>Mini Oyunlar</h3>
+          <div class="mini-games">
+            <button data-action="task">Refleks Koşusu</button>
+            <button data-action="task">Eşleştirme</button>
+            <button data-action="task">Dans Modu</button>
+          </div>
+          <div class="voice-box">
+            <span>🎙️ Sesli AI</span>
+            <p>"Bugün konforunu yükseltmek ister misin?"</p>
+            <button data-action="chat">Konuşmayı Başlat</button>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>Bu demo, maskotla etkileşim akışlarını görselleştirmek için hazırlanmıştır.</p>
+        <button id="resetDemo">Demo Sıfırla</button>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
